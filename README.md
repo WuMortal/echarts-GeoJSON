@@ -12,13 +12,13 @@
 
 province 目录下的直辖市
 
-![image-20210810112336958](\other\images\image-20210810112336958.png)
+![image-20210810112336958](/other/images/image-20210810112336958.png)
 
 
 
 other 目录下的直辖市
 
-![image-20210810112148350](\other\images\image-20210810112148350.png)
+![image-20210810112148350](/other/images/image-20210810112148350.png)
 
 ## other/index.html
 
@@ -32,4 +32,4 @@ other 目录下的直辖市
 
 其他省份需要「不绘制具体的市的信息」也可以使用该工具，替换 `features.geometry.coordinates` 中的值，还需要将 `json` 文件中的 `features.geometry.type` 设为 `MultiPolygon`
 
-![image-20210810112914847](\other\images\image-20210810112914847.png)
+![image-20210810112914847](/other/images/image-20210810112914847.png)
