@@ -12,13 +12,13 @@
 
 province 目录下的直辖市
 
-![image-20210810112336958](.\other\images\image-20210810112336958.png)
+![image-20210810112336958](other\images\image-20210810112336958.png)
 
 
 
 other 目录下的直辖市
 
-![image-20210810112148350](.\other\images\image-20210810112148350.png)
+![image-20210810112148350](other\images\image-20210810112148350.png)
 
 ## other/index.html
 
