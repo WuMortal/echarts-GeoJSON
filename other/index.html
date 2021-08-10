@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body style="width: 100%;">
+
+    <div>
+        <input style="width: 230px;margin-bottom: 10px;" type="number" id="provinceId" placeholder="请输入需要提取的直辖市 code" />
+        <button id="analyze">提取</button>
+    </div>
+    <textarea style="width: 430px;height: 500px;" id="content"></textarea>
+
+
+    <script type="text/javascript">
+        var codeInputElem = $('#provinceId');
+        var contentElem = $('#content');
+
+        $('#analyze').click(function () {
+            if (!codeInputElem.val()) {
+                alert('code 不能为空！');
+            }
+            $.getJSON('/province/' + codeInputElem.val() + '.json', function (json) {
+                var dataJson = [];
+                $.each(json.features, function (i, e) {
+                    $.each(e.geometry.coordinates, function (j, e1) {
+                        dataJson.push(e1)
+                    });
+
+                });
+
+                contentElem.text(JSON.stringify(dataJson));
+                console.log(dataJson);
+            });
+        });
+    </script>
+</body>
+
+</html>
